@@ -31,12 +31,15 @@ git checkout repository
 ```
 rm -rf file1 file2 file3 .. etc
 ```
-7. Instalar o jar nesse diretório (my-repository)
+7. Instalar o jar nesse diretório (my-repository) Linux
 ```
 mvn install:install-file -DgroupId=br.com.zapjuno -DartifactId=zapjunoapi -Dversion=1.0 -Dfile=/home/dev/Source/zapjunoapi/target/integration-api-java-sdk-1.0-SNAPSHOT.jar -Dpackaging=jar -DgeneratePom=true -DlocalRepositoryPath=.  -DcreateChecksum=true
 ```
-8. Adicionar os arquivos, fazer o commit e push
-
+8. Instalar o jar nesse diretório (my-repository) Windows
+```
+mvn install:install-file -DgroupId="br.com.zapjuno" -DartifactId=zapjunoapi -Dversion="1.0" -Dfile="C:\Source\zapjunoapi\target\integration-api-java-sdk-1.0-SNAPSHOT.jar" -Dpackaging=jar  -DgeneratePom=true -DlocalRepositoryPath="." -DcreateChecksum=true 
+```
+9. Adicionar os arquivos, fazer o commit e push
 ```
 git add -A . && git commit -m "released version X.Y.Z"
 ```

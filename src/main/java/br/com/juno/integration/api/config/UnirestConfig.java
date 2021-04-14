@@ -6,13 +6,7 @@ import br.com.juno.integration.api.base.exception.ErrorDetail;
 import br.com.juno.integration.api.base.exception.JunoApiException;
 import br.com.juno.integration.api.services.JunoApiManager;
 import br.com.juno.integration.api.utils.JacksonUtils;
-import kong.unirest.Config;
-import kong.unirest.HttpRequest;
-import kong.unirest.HttpRequestSummary;
-import kong.unirest.HttpResponse;
-import kong.unirest.Interceptor;
-import kong.unirest.Unirest;
-import kong.unirest.UnirestParsingException;
+import kong.unirest.*;
 
 public final class UnirestConfig {
 
