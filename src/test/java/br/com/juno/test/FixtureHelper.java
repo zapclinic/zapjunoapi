@@ -3,9 +3,11 @@ package br.com.juno.test;
 import static org.junit.jupiter.api.Assertions.fail;
 
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import java.util.stream.Stream;
 
 import br.com.juno.integration.api.model.BankAccountType;
 
@@ -62,11 +64,17 @@ public class FixtureHelper {
 
     private static String readFromResource(Path path) {
         try {
-            return Files.readString(path);
+            return readLineByLineJava8(path);
         } catch (IOException e) {
             fail("Unable to load resource", e);
         }
         return null;
     }
 
+    private static String readLineByLineJava8(Path path) throws IOException {
+        StringBuilder contentBuilder = new StringBuilder();
+        Stream<String> stream = Files.lines(path, StandardCharsets.UTF_8);
+        stream.forEach(s -> contentBuilder.append(s).append("\n"));
+        return contentBuilder.toString();
+    }
 }
