@@ -7,7 +7,7 @@ import org.mockserver.junit.jupiter.MockServerExtension;
 import org.mockserver.junit.jupiter.MockServerSettings;
 
 @ExtendWith(MockServerExtension.class)
-@MockServerSettings(perTestSuite = true, ports = 8888)
+@MockServerSettings(perTestSuite = true, ports = 1079)
 public abstract class AbstractServiceTest extends AbstractTest {
 
     @BeforeEach
@@ -20,4 +20,6 @@ public abstract class AbstractServiceTest extends AbstractTest {
     }
 
     private MockServerManager mockServer;
+
+
 }

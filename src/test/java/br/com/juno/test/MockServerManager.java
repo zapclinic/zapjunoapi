@@ -9,6 +9,7 @@ import static org.mockserver.model.HttpResponse.response;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.stream.Stream;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -180,6 +181,14 @@ public final class MockServerManager {
                         response(getResource("plans", "id", "activation", "POST.mock")) //
                                 .withContentType(MediaType.APPLICATION_JSON) //
                                 .withStatusCode(200)); //
+    }
+
+    public void stop() {
+        mockServer.stop();
+    }
+
+    public boolean hasStopped(int attempts, long timeout, TimeUnit timeUnit) {
+        return mockServer.hasStopped(attempts, timeout, timeUnit);
     }
 
     private HttpRequest getRequestExpectationWithoutResourceToken() {

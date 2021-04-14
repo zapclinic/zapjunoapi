@@ -110,8 +110,8 @@ public final class JunoApiConfig {
 
     public static class UnitTestEnviroment implements Environment {
 
-        private static final String AUTHORIZATION_SERVER = "http://localhost:8888";
-        private static final String RESOURCE_SERVER = "http://localhost:8888";
+        private static final String AUTHORIZATION_SERVER = "http://localhost:1079";
+        private static final String RESOURCE_SERVER = "http://localhost:1079";
 
         @Override
         public String getAuthorizationServerEndpoint() {
