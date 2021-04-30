@@ -185,6 +185,9 @@ public class PaymentCreateRequest extends BaseResourceRequest {
         private String creditCardId;
         private String creditCardHash;
 
+        public CreditCardDetails() {
+        }
+
         public CreditCardDetails(String creditCardId) {
             this.creditCardId = creditCardId;
         }
@@ -197,6 +200,9 @@ public class PaymentCreateRequest extends BaseResourceRequest {
             return creditCardHash;
         }
 
+        public void setCreditCardHash(String creditCardHash) {
+            this.creditCardHash = creditCardHash;
+        }
     }
 
     public Billing getBilling() {
