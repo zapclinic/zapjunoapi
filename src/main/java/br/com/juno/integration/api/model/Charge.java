@@ -23,6 +23,7 @@ public class Charge extends BaseModel {
     private BilletDetails billetDetails;
     private List<Payment> payments;
     private List<PixStaticQRCode> pix;
+    private Subscription subscription;
 
     protected Charge() {
         // NTD
@@ -140,6 +141,10 @@ public class Charge extends BaseModel {
         return pix;
     }
 
+    public Subscription getSubscription() {
+        return subscription;
+    }
+
     protected void setCode(Long code) {
         this.code = code;
     }
@@ -186,6 +191,10 @@ public class Charge extends BaseModel {
 
     protected void setPix(List<PixStaticQRCode> pix) {
         this.pix = pix;
+    }
+
+    public void setSubscription(Subscription subscription) {
+        this.subscription = subscription;
     }
 
     @Override
