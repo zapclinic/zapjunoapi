@@ -2,40 +2,39 @@ package br.com.juno.integration.api.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.time.LocalDateTime;
 
 public class WebhookResultDataAttributes implements Serializable {
 
-    private LocalDateTime createdOn;
-    private LocalDateTime date;
-    private LocalDateTime releaseDate;
+    private String createdOn;
+    private String date;
+    private String releaseDate;
     private BigDecimal amount;
     private BigDecimal fee;
     private String status;
     private String type;
     private Charge charge;
 
-    public LocalDateTime getCreatedOn() {
+    public String getCreatedOn() {
         return createdOn;
     }
 
-    public void setCreatedOn(LocalDateTime createdOn) {
+    public void setCreatedOn(String createdOn) {
         this.createdOn = createdOn;
     }
 
-    public LocalDateTime getDate() {
+    public String getDate() {
         return date;
     }
 
-    public void setDate(LocalDateTime date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
-    public LocalDateTime getReleaseDate() {
+    public String getReleaseDate() {
         return releaseDate;
     }
 
-    public void setReleaseDate(LocalDateTime releaseDate) {
+    public void setReleaseDate(String releaseDate) {
         this.releaseDate = releaseDate;
     }
 

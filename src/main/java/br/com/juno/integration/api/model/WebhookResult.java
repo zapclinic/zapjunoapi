@@ -1,14 +1,13 @@
 package br.com.juno.integration.api.model;
 
 import java.io.Serializable;
-import java.time.LocalDateTime;
 import java.util.List;
 
 public class WebhookResult implements Serializable {
 
     private String eventId;
     private String eventType;
-    private LocalDateTime timestamp;
+    private String timestamp;
     private List<WebhookResultData> data;
 
     public String getEventId() {
@@ -27,11 +26,11 @@ public class WebhookResult implements Serializable {
         this.eventType = eventType;
     }
 
-    public LocalDateTime getTimestamp() {
+    public String getTimestamp() {
         return timestamp;
     }
 
-    public void setTimestamp(LocalDateTime timestamp) {
+    public void setTimestamp(String timestamp) {
         this.timestamp = timestamp;
     }
 
